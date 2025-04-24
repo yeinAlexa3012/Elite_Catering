@@ -1,0 +1,510 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Times New Roman', Times, serif; /* Tipo de letra */
+    padding-top: 80px; /* Espaciado para el menu flotante */
+}
+
+
+.lista_menu {
+    display: flex; /* Pone los elementos en fila */
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: center; /* Centra verticalmente los elementos */
+    background-color: #ffffff; /* Color fondo del menu */
+    padding: 0 20px; /* Espacio interno del menu 0 arriba y abajo, 20 a los lados */
+    position: fixed; /* Fija el menu en la parte superior */
+    top: 0; /* Sin espacio arriba */
+    left: 0; /* Sin espacio a la izquierda */
+    width: 100%; /* Para que ocupe todo el ancho */
+    z-index: 1000; /* Asegura que esté por encima de todos elementos */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombreado al rededor del menu para que no se vea plano */
+}
+
+
+
+.lista{
+    margin-right: 100px; /* Espacio a la izquierda del menu */
+}
+
+.logo_menu{
+    display: flex; /* Pone el logo en fila */
+    margin-left: 60px; /* Espaciado a la izquierda del logo */
+}
+
+.logo_menu img {
+    width: 80px; /* Ancho del logo */
+    height: 80px;/* Alto del logo */
+}
+
+.lista_menu ul {
+    display: flex; /* Pone los elementos de la lista uno al lado del otro */
+    list-style: none; /* Elimina los puntos de la lista */
+    gap: 30px; /* Espaciado entre los elementos de la lista */
+}
+
+.lista_menu li a{
+    font-size: 18px; /* Tamaño de la letra */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: #262927; /* Color de la letra del menu */
+}
+
+.banner {
+    position: relative; /* Permite posicionar elementos hijos encima */
+    width: 100%; /* Ancho completo del banner */
+    height: 500px; /* Ajusta la altura del banner según tu diseño */
+    display: flex; /* Flexbox para centrar contenido */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    text-align: center; /* Centra el texto */
+    color: white; /* Color del texto */
+    overflow: hidden; /* Evita que el contenido se desborde */
+}
+
+.imgBanner img {
+    position: absolute; /* Permite que la imagen ocupe todo el banner */
+    width: 100%; /* Ancho completo del banner */
+    height: 100%; /* Alto completo del banner */
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+    top: 0; /* Sin espacio arriba */
+    left: 0; /* Sin espacio a la izquierda */
+    z-index: 1; /* Posiciona la imagen destras del contenido */
+}
+
+.imgBanner::before { /* Capa oscura sobre la imagen */
+    content: ""; /* Necesario para crear un pseudo-elemento */
+    position: absolute; /* Permite que el pseudo-elemento ocupe todo el banner */
+    width: 100%; /* Ancho completo del banner */
+    height: 100%; /*Alto completo del banener */
+    background-color: rgba(0, 0, 0, 0.4); /* Color del sombreado */ 
+    top: 0; /* Sin espacio arriba */
+    left: 0; /* Sin espacio a la izquierda */
+    z-index: 2; /* Posiciona la capa oscura sobre la imagen */
+}
+
+.banner h1, /* Titulo principal */
+.banner h3, /* Subtitulo */
+.botonesBanner { /* Botones */
+    z-index: 2; /* Asegura que el texto esté sobre la imagen */
+}
+
+.contenidoBanner{
+    display: flex; /* Pone los elementos en fila */
+    flex-direction: column; /* Coloca los elementos en columna */
+}
+
+.contenidoBanner h1{
+    margin-bottom: 40px; /* Espacio abajo del titulo */
+    font-size: 50px; /* Tamaño del titulo */
+}
+
+.contenidoBanner h3{
+    font-size: 25px; /* Tama;o del subtitulo */
+    margin-bottom: 40px; /* Espacio abajo del subtitulo */
+}
+
+.botonesBanner{
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.btnIniciar{
+    padding: 15px 0;
+    background-color: transparent;
+    border-radius: 50px;
+    border: solid #ffffff;
+}
+
+.btnIniciar a{
+    padding: 15px 40px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.btnRegistro{
+    padding: 15px 0;
+    background-color: #ffffff;
+    border-radius: 50px;
+    border: solid #ffffff;
+}
+
+.btnRegistro a{
+    padding: 15px 40px;
+    text-decoration: none;
+    color: #262927;
+}
+
+.contenidoFrase{
+    width: 100%; /* Ancho completo del contenedor */
+    height: 500px; /* Alto del contenedor */
+    padding: 200px; /* Espaciado interno del contenedor */
+    
+}
+
+.contenidoFrase h2{
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Cnetra Verticalmente */
+    text-align: center; /* Centra el texto */
+   font-size: 40px; /* Tamaño del texto */
+   font-weight: normal; /* Negrita del texto */
+}
+
+.contenidoFrase p{
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    text-align: center; /* Centra el texto */
+    font-size: 20px; /* Tamaño del texto */
+    margin-top: 30px; /* Espaciado arriba del texto */ 
+}
+
+.section_service{
+    width: 100%; /* Ancho completo del contenedor */
+    height: 500px; /* Alto del contenedor */
+    background-color: #262927; /* Color de fondo del contenedor */
+    padding: 30px 0; /*Espaciado interno del contenedor */
+}
+
+.section_service h2{
+    text-align: center; /* Cntra el titulo */
+    color: #ffffff; /* Color del texto */
+}
+
+.servicios{
+    margin-top: 50px; /* Espacio arriba del contenedor */
+    display: flex; /* Pone los elementos al lado del otro */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centraverticalmente */
+    text-align: center; /* Centra el texto */
+    
+}
+
+.servicio1{
+    width: 300px; /* Ancho del contenedor */
+    height: 300px; /* Alto del contendor */
+    padding: 20px; /* Espacio interno del contenedor */
+}
+
+.servicio1 h3{
+    margin-top: 20px; /* Espacio arriba del titulo */
+    margin-bottom: 20px; /* Espacio abajo del titulo */
+    color: #ffffff; /* Color del texto */ 
+}
+
+.servicio1 ul{
+    margin-top: 20px; /* Espacio arriba de la lista */
+    text-align: left; /* Alinear el texto a la izquierda */
+    list-style-type: none; /* Elimina los puntos de la lista */
+    color: #ffffff; /* Color del texto */
+}
+
+.img_servicio1 {
+    position: relative; /* Permite posicionar elementos encima de la imagen */
+    overflow: hidden; /* Evita que el contenido se desborde */
+}
+
+/* Imagen sin efecto por defecto */
+.img_servicio1 img {
+    width: 100%; /* Ancho completo del contenedor */
+    height: 100%; /* Alto completo del contenedor */
+    transition: all 0.3s ease; /* transicion suave para el efecto hover all es para todos los efectos
+    0.3 es el tiempo de la transicion y ease el tipo de transicion */
+}
+
+/* Capa blanca que aparece al hacer hover */
+.img_servicio1::before { /* before es para crear un pseudo-elemento antes de la imagen */
+    content: ""; /* Necesario para crear el pseudo-elemento */
+    position: absolute; /* Permite que el pseudo-elemento ocupe todo el contenedor */
+    top: 0; /* Sin espacio arriba */
+    left: 0; /* Sin espacio a la izquierda */
+    width: 100%; /* Ancho completo del contenedor */
+    height: 98%; /* Ancho del contenedor */
+    background-color: rgba(255, 255, 255, 0.9); /* Blanco con opacidad */
+    opacity: 0; /* Invisible por defecto */
+    transition: opacity 0.3s ease; /* Transicion para el efecto hover, opacity es la opacidad */
+    z-index: 1; /* Posiciona la capa blanca encima de la imagen */
+}
+
+/* Mostrar capa blanca al hacer hover */
+.img_servicio1:hover::before { /* Al momento que pase el mouse por encima de la imagen */
+    opacity: 1; /* Cambia la opacidad a 1 para que la capa blanca se haga visible */
+}
+
+/* Título encima de la imagen */
+.img_servicio1::after { /* after es para crear un pseudo elemento despues de la imagen */
+    content: attr(data-title); /* Muestra el texto del atributo data title */
+    position: absolute; /* Permite que el pseudo-elemento ocupe todo el contenedor */
+    top: 39%; /* Centra verticalmente */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%); /* Transform es para centrar el texto */
+    color: #262927; /* Color del texto */
+    font-weight: bold; /* Negrita */
+    font-size: 18px; /* Tamaño del texto */
+    opacity: 0; /* Invisible por defecto */
+    transition: opacity 0.3s ease; /* Transicion para el efecto hover, ease es el tipo de transicion */
+    text-align: center; /* Centra el texto */
+    width: 80%; /* Ancho del texto */
+    z-index: 2; /* Posiciona el texto encima de la imagen */
+}
+
+.img_servicio1:hover::after {
+    opacity: 1; /* Cambia la opacidad a 1 para que el texto se haga visible */
+}
+
+.texto-decorativo2{
+    position: relative; /* Permite posicionar elementos hijos encima */
+    text-align: center; /* Centra el texto */
+    color: white; /* Color del texto */
+    max-width: 500px; /* Ancho maximo del contenedor */
+    margin: 40px auto; /* Centra el contenedor horizontalmente */
+}
+
+.texto-decorativo {
+    position: relative; /* Permite posicionar elementos hijos encima */
+    text-align: center; /* Centra el texto */
+    color: white; /* Color del texto */
+    max-width: 500px; /* Ancho maximo del contenedor */
+    margin: 40px auto; /* Centra el contenedor horizontalmente */
+}
+
+.texto-decorativo::before, /*Crea una linea decorativa arriba del texto */
+.texto-decorativo::after { /* Crea una linea decorativa abajo del texto */
+    content: ""; /* Necesario para crear un pseudo-elemento */
+    position: absolute; /* Permite que el pseudo-elemento ocupe todo el contenedor */
+    left: 1%; /* Sin espacio a la izquierda */
+    right:1%; /* Sin espacio a la derecha */
+    height: 1px; /* Alto de la linea */
+    background-color: white; /* Color de la linea */
+}
+
+.texto-decorativo2::before, /*Crea una linea decorativa arriba del texto */
+.texto-decorativo2::after { /* Crea una linea decorativa abajo del texto */
+    content: ""; /* Necesario para crear un pseudo-elemento */
+    position: absolute; /* Permite que el pseudo-elemento ocupe todo el contenedor */
+    left: 1%; /* Sin espacio a la izquierda */
+    right:1%; /* Sin espacio a la derecha */
+    height: 1px; /* Alto de la linea */
+    background-color: white; /* Color de la linea */
+}
+
+.texto-decorativo::before { 
+    top: -20px; /* Espacio arriba de la linea */
+}
+
+.texto-decorativo::after {
+    bottom: -57px; /* Espacio abajo de la linea */
+}
+
+.texto-decorativo2::before { 
+    top: -20px; /* Espacio arriba de la linea */
+}
+
+.texto-decorativo2::after {
+    bottom: -20px; /* Espacio abajo de la linea */
+}
+
+.img_content {
+    position: relative; /* Permite posicionar los hijos de un elemento encima */
+    width: 100%; /* Ancho completo del contenedor */
+}
+
+/* Estilo del botón */
+.btn_info {
+    position: absolute; /* Permite que el boton ocupe todo el contenedor */
+    top:65%; /* Cantra verticalmente */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%); /* Transform es para centrar el boton */
+    opacity: 0; /* Invisible por defecto */
+    transition: opacity 0.3s ease; /* Transicion para el efecto hover */
+    z-index: 3; /* Encima de la capa blanca */
+}
+
+/* Muestra el botón al hacer hover sobre la imagen */
+.img_servicio1:hover + .btn_info {
+    opacity: 1; /* Cambia la opacidad a 1 para volver visible el boton */
+}
+
+.btn_info a {
+    padding: 10px 35px; /* Espaciado interno del boton */
+    background-color: transparent; /* Color de fondo del boton */
+    border-radius: 50px; /* Bordes redondeados */
+    text-decoration: none; /* Quitarle el subrayado al enlace */
+    color: #262927; /* Color del texto del boton */
+    border: 2px solid #262927; /* Color del borde del boton */
+}
+
+.nuestraHistoria{
+    padding: 70px; /* Espaciado interno del contenedor */
+}
+
+.img_historia1 img{
+    width: 600px; /* Ancho de la imagen */
+    margin-right: 30px; /* Espacio a la derecha de la imagen */
+}
+
+.texto_historia img{
+    width: 270px; /* Ancho de la imagen */
+    margin-top: 27px; /* Espacio arriba de la imagen */
+}
+
+.contenido_historia{
+    display: flex; /* Pone los elementos uno al lado del otro */
+    gap: 2rem; /* Espacio entre los elementos */
+    justify-content: center; /* Alineea horizontalmente */
+    align-items: center; /* Alinea verticalmente */
+}
+
+.texto_historia h2{
+    margin-bottom: 20px; /* Espacio abajo del titulo */
+}
+
+.texto_historia{
+    width: 300px; /* Ancho del contenedor */
+    justify-content: center; /* Alinea horizontalmente */
+    align-items: center; /*Alinea Verticalmente */
+}
+
+.lista_clientes{
+    width: 100%; /* Ancho completo del contenedor */
+    height: 550px; /* Alto del contenedor */
+    background-color: #262927; /* Color de fondo del contenedor */
+    padding: 60px; /*Espaciado interno del contenedor */
+    align-content: center; /* Alinea el contenido al centro del contenedor */
+}
+
+.tarjetas_clientes{
+    display: flex; /* Pone los elementos uno al lado del otro */
+    align-items: center; /* Alineamiento vertical */
+    justify-content: center; /* Alineamiento horizontal */
+    gap: 3rem; /* Espaciado entre los elementos */
+}
+
+.lista_clientes h2{
+    color: #ffffff; /* color del texto */
+    margin-bottom: 40px; /* Espaciado abajo del titulo */
+}
+
+.clientes p{
+    color: #ffffff; /*Color del texto */
+    margin-bottom: 40px; /* Espaciado abajo del texto */
+}
+
+.tarjetas_clientes img{
+    width: 250px; /* Ancho de la imagen */
+    height: 200px; /* Alto de la imagen */
+}
+
+
+.img_cliente{
+    position: relative; /* Permite posicionar elementos encima de la imagen */
+    overflow: hidden; /* Evita que el contenido se desborde */
+}
+
+.img_cliente::before { /* Capa oscura sobre la imagen */
+    content: ""; /* Necesario para crear un pseudo-elemento */
+    position: absolute; /* Permite que el pseudo-elemento ocupe todo el banner */
+    width: 100%; /* Ancho completo del banner */
+    height: 20%; /*Alto completo del banener */
+    background-color: rgba(0, 0, 0, 1); /* Color del sombreado */ 
+    bottom: 0; /* Sin espacio arriba */
+    left: 0; /* Sin espacio a la izquierda */
+    z-index: 2; /* Posiciona la capa oscura sobre la imagen */
+}
+
+/* Título encima de la imagen */
+.img_cliente::after { /* after es para crear un pseudo elemento despues de la imagen */
+    content: attr(data-title); /* Muestra el texto del atributo data title */
+    position: absolute; /* Permite que el pseudo-elemento ocupe todo el contenedor */
+    top: 90%; /* Centra verticalmente */
+    left: 29%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%); /* Transform es para centrar el texto */
+    color: #ffffff; /* Color del texto */
+    font-size: 16px; /* Tamaño del texto */
+    opacity: 1; /* Invisible por defecto */
+    text-align: center; /* Centra el texto */
+    width: 80%; /* Ancho del texto */
+    z-index: 2; /* Posiciona el texto encima de la imagen */
+}
+
+.footer{
+    width: 100%; /* Ancho del contenedor */
+    height: 500px;
+    padding: 40px;
+    
+}
+
+.politicas_footer img{
+    width: 150px;
+    height: 150px;
+    margin-left: 38px;
+    margin-bottom: 15px;
+}
+
+.politicas_footer{
+    justify-content: center;
+    flex-direction: column;
+}
+
+.politicas_footer h2{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.content_footer{
+    display: flex;
+    gap: 6rem;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.datos{
+    background-color: transparent;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: solid #262927;
+    border-radius: 50px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7); 
+}
+
+.contactos_footer h5{
+    margin-bottom: 50px;
+}
+
+.contactos_footer h2{
+    margin-bottom: 30px;
+}
+
+.redes_sociales{
+    display: flex;
+    background-color: #262927;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 50px;
+    gap: 2rem;
+    align-items: center;
+    align-content: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7); 
+}
+
+.redes_sociales p{
+    color: #ffffff;
+}
+
+.horarios{
+    background-color: #262927;
+    padding: 30px;
+    border-radius: 30px;
+    align-items: center;
+    align-content: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7); 
+}
+
+.horarios p{
+    color: #ffffff;
+}
+
