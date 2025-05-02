@@ -321,11 +321,12 @@ body{
     transform: translate(-50%, -50%); /* Transform es para centrar el boton */
     opacity: 0; /* Invisible por defecto */
     transition: opacity 0.3s ease; /* Transicion para el efecto hover */
-    z-index: 3; /* Encima de la capa blanca */
+    z-index: 10; /* Encima de la capa blanca */
+    
 }
 
 /* Muestra el botón al hacer hover sobre la imagen */
-.img_servicio1:hover + .btn_info {
+.img_servicio1:hover .btn_info {
     opacity: 1; /* Cambia la opacidad a 1 para volver visible el boton */
 }
 
