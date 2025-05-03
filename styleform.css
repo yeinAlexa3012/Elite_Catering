@@ -1,0 +1,144 @@
+* {
+    width: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    /* Tipo de letra */
+}
+
+/* Estilo del lado izquierdo del formulario*/
+.cont-diseño {
+    background-color: #262927;
+    border-bottom-right-radius: 5rem;
+    border-top-right-radius: 5rem;
+    width: 45%;
+}
+
+.cont-mini {
+    width: 100%;
+    margin: 0;
+}
+
+.cont-mini-diseñoLogo {
+    width: 45%;
+}
+
+.logo {
+    width: 15rem;
+    height: auto;
+    margin-left: 2rem;
+    margin-top: 75%;
+}
+
+.cont-mini-diseñoBtn {
+    width: 55%;
+}
+
+.botones {
+    margin-top: 75%;
+    width: 60%;
+    margin-left: 9.3rem;
+}
+
+.botones button {
+    background-color: #ffffff;
+    border: none;
+    color: #262927;
+    margin-top: 10px;
+    border-bottom-left-radius: 50rem;
+    border-top-left-radius: 50rem;
+    padding: 10px 30px;
+    text-align: left;
+}
+
+button[type="reset"] {
+    margin-left: 0rem;
+}
+
+button[type="button"] {
+    background: linear-gradient(to right, #fdfcfc, #262927);
+    margin-left: -0.4rem;
+}
+
+/* Estilo del lado derecho del formulario*/
+.cont-info {
+    width: 43%;
+    padding-top: 2rem;
+    padding-left: 5rem;
+}
+
+.cont-info img {
+    width: 10rem;
+    height: auto;
+    margin-left: 11rem;
+}
+
+.cont-info h1 {
+    color: #262927;
+    margin: 0 0 2rem 9.5rem;
+}
+
+.btn {
+    width: 40%;
+    background-color: #262927;
+    border-radius: 5px;
+    border: none;
+    color: #ffffff;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 2rem;
+    margin-left: 9.5rem;
+}
+
+.btn:hover {
+    background-color: #a9aaaa;
+    color: #262927;
+}
+
+/* Estilo del formulario de solicitud lado izquierdo*/
+.cont-infoSolicitud {
+    width: 50%;
+    padding: 2rem 5rem 1rem 5rem;
+}
+.cont-infoSolicitud h1{
+    color: #262927;
+    margin: 0 0 2rem 0;
+}
+
+.cont-infoSolicitud label {
+    color: #262927;
+    font-size: 1.2rem;
+    margin-left: 1rem;
+}
+
+
+.cont-infoSolicitud .btnReset {
+    width: 50px;
+    margin-left: 2rem;
+    border: none;
+    background-color: white;
+}
+
+/* Estilo del formulario de solicitud lado derecho*/
+.cont-diseñoSolicitud {
+    background-color: #262927;
+    border-top-left-radius: 5rem;
+    width: 50%;
+    padding-right: -2rem;
+}
+
+.cont-diseñoSolicitud img {
+    margin: 5% 0 0 30%;
+
+}
+
+.cont-diseñoSolicitud h3 {
+    text-align: center;
+    font-family: cursive;
+    color: white
+}

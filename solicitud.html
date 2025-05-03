@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styleform.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingresar Solicitud</title>
+</head>
+
+<body>
+    <section class="solicitud">
+        <div class="row vh-100">
+            <!--Columna Izquierda-->
+            <section class="cont-infoSolicitud col-md-6">
+                <h1>Solicitud De Evento</h1>
+                <form action=""> <!--En el action se pone a donde se van a enviar los datos-->
+                    <div class="mb-3">
+                        <label for="nombreCliente" class="form-label">Nombre completo</label>
+                        <input type="text" class="form-control" id="nombreCliente" name="nombreCliente" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="telefono" class="form-label">Teléfono de contacto</label>
+                        <input type="tel" class="form-control" id="telefono" name="telefono" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="fechaEvento" class="form-label">Fecha del evento</label>
+                        <input type="date" class="form-control" id="fechaEvento" name="fechaEvento" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="tipoEvento" class="form-label">Tipo de evento</label>
+                        <select class="form-select" id="tipoEvento" name="tipoEvento" required>
+                            <option value="">Selecciona un tipo</option>
+                            <option value="boda">Boda</option>
+                            <option value="cumpleaños">Cumpleaños</option>
+                            <option value="corporativo">Corporativo</option>
+                            <option value="babyshower">Baby Shower</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="horaEvento" class="form-label">Hora del evento</label>
+                        <input type="time" class="form-control" id="horaEvento" name="horaEvento" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="invitados" class="form-label">Número de invitados</label>
+                        <input type="number" class="form-control" id="invitados" name="invitados" min="1" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Servicios adicionales</label><br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="decoracion" name="servicios[]"
+                                value="decoración">
+                            <p class="form-check-label" for="decoracion">Decoración</p>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="musica" name="servicios[]"
+                                value="música">
+                            <p class="form-check-label" for="musica">Música</p>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="fotografia" name="servicios[]"
+                                value="fotografía">
+                            <p class="form-check-label" for="fotografia">Fotografía</p>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="mensaje" class="form-label">Mensaje</label>
+                        <textarea class="form-control" id="mensaje" name="mensaje" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar Solicitud</button>
+                    <button type="reset" class="btnReset"><img src="img/iconlimpiarForm.png"></button>
+                </form>
+            </section>
+            <!--Columna Derecha-->
+            <section class="cont-diseñoSolicitud col-md-6">
+                <img src="img/logoOscuro.png" class="logo">
+                <h3>Frase bonita para el formulario de solicitud</h3>
+            </section>
+        </div>
+    </section>
+</body>
+
+</html>
