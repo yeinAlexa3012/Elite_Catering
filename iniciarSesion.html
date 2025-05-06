@@ -30,7 +30,7 @@
             <!-- Columna derecha -->
             <section class="cont-info col-md-6">
                 <h1>Inicio Sesión</h1>
-                <form action=""><!--En el action se pone a donde se van a enviar los datos-->
+                <form action="">
                     <div class="mb-3">
                         <label for="email" class="form-label">Email</label>
                         <input type="email" class="form-control" id="email" required>
@@ -40,31 +40,49 @@
                         <input type="password" class="form-control" id="password" required>
                     </div>
                     <div class="mb-3">
-                        <a href="#">¿Olvidaste tu contraseña?</a>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
-                    <!-- Mensaje emergente CAMBIAR DESPUES-->
-                    <div id="mensajeBienvenida" class="alert alert-success text-center"
-                        style="display: none; position: fixed; top: 20px; left: 50%; transform: translateX(-50%); z-index: 1000;">
-                        Inicio de Sesion Exitoso: ¡Bienvenido a Elite Catering Service!
+                        <a href="#" id="enlaceRecuperacion">¿Olvidaste tu contraseña?</a>
                     </div>
 
+                    <!-- Mensaje de recuperación -->
+                    <div id="mensajeRecuperacion" class="alert alert-success text-center"
+                        style="display: none; position: fixed; top: 20px; left: 50%; transform: translateX(-50%); z-index: 1000; background-color: #262927; color: #fdfcfc;"
+                        >Comprueba tu dispositivo móvil.<br>Hemos enviado un enlace para restablecer tu contraseña.</div>
+
+                    <!-- Script para mostrar mensaje de recuperación al hacer clic en el enlace -->
                     <script>
-                        document.querySelector("form").addEventListener("submit", function (e) {
-                            e.preventDefault(); // evita recargar la página
-
-                            // Validar email y password si deseas antes de mostrar el mensaje
-
-                            const mensaje = document.getElementById("mensajeBienvenida");
+                        document.querySelector("#enlaceRecuperacion").addEventListener("click", function (e) {
+                            e.preventDefault();
+                            const mensaje = document.getElementById("mensajeRecuperacion");
                             mensaje.style.display = "block";
-
-                            // Opcional: ocultar el mensaje después de unos segundos
+                            // Ocultar automáticamente después de 5 segundos
                             setTimeout(() => {
                                 mensaje.style.display = "none";
-                            }, 4000);
+                            }, 10000);
+                        });
+                    </script>
+
+
+                    <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+                    <!-- Mensaje de bienvenida -->
+                    <div id="mensajeBienvenida" class="alert alert-success text-center"
+                        style="display: none; margin-top: 95px; position: fixed; top: 20px; left: 50%; transform: translateX(-50%); z-index: 1000; background-color: #262927; color: #fdfcfc;"
+                        >Inicio de Sesión Exitoso</div>
+
+                    <!-- Script para mostrar mensaje de bienvenida al enviar el formulario -->
+                    <script>
+                        document.querySelector("form").addEventListener("submit", function (e) {
+                            e.preventDefault();
+                            // Validar email y contraseña si deseas antes de mostrar el mensaje
+                            const mensaje = document.getElementById("mensajeBienvenida");
+                            mensaje.style.display = "block";
+                            // Ocultar automáticamente después de 5 segundos
+                            setTimeout(() => {
+                                mensaje.style.display = "none";
+                            }, 5000);
                         });
                     </script>
                 </form>
+
             </section>
         </div>
     </section>
