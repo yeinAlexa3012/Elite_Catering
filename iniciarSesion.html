@@ -46,14 +46,14 @@
                     <!-- Mensaje emergente CAMBIAR DESPUES-->
                     <div id="mensajeBienvenida" class="alert alert-success text-center"
                         style="display: none; position: fixed; top: 20px; left: 50%; transform: translateX(-50%); z-index: 1000;">
-                        ¡Bienvenida, Dayana!
+                        Inicio de Sesion Exitoso: <br> ¡Bienvenido a Elite Catering Service!
                     </div>
 
                     <script>
                         document.querySelector("form").addEventListener("submit", function (e) {
                             e.preventDefault(); // evita recargar la página
 
-                            // Aquí podrías validar email y password si deseas antes de mostrar el mensaje
+                            // Validar email y password si deseas antes de mostrar el mensaje
 
                             const mensaje = document.getElementById("mensajeBienvenida");
                             mensaje.style.display = "block";
@@ -61,7 +61,7 @@
                             // Opcional: ocultar el mensaje después de unos segundos
                             setTimeout(() => {
                                 mensaje.style.display = "none";
-                            }, 5000);
+                            }, 4000);
                         });
                     </script>
                 </form>
